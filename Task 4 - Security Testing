@@ -1,0 +1,20 @@
+# Test Case ID: TC_Security_004  
+**Title:** Check Login Security Measures  
+
+## Preconditions
+- Use a valid test account.
+- Ensure the application login page is accessible.
+
+## Test Steps
+1. Attempt to inject SQL code into the username and password fields.  
+   Example: `' OR '1'='1`  
+2. Try logging in with invalid credentials.  
+3. Observe how the system handles and displays error messages.  
+4. Verify that no database or sensitive information is exposed.  
+5. Check that user passwords are stored using encryption or hashing (if accessible).
+
+## Expected Results
+- The application should prevent SQL injection and XSS attacks.  
+- Error messages should be generic (e.g., “Invalid credentials”) and not reveal system details.  
+- User credentials should be securely stored (hashed/encrypted).  
+- Login mechanism should remain secure under all tests.
